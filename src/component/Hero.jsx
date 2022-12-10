@@ -23,7 +23,7 @@ const Hero = ({
 							{btntext}
 						</button>
 						<div className=''>
-							{videos.map((val, i) => (
+							{videos?.map((val, i) => (
 								<Clips
 									key={i}
 									imgsrc={val.imgsrc}
