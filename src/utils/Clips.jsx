@@ -5,7 +5,6 @@ const Clips = ({ clip, imgsrc }) => {
 		<div>
 			<div className=' relative h-28 w-28'>
 				<img
-					className=''
 					src={imgsrc}
 					alt='img/clips'
 				/>
