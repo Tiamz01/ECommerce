@@ -107,7 +107,7 @@ const sneaker = {
 	img: sneakershoe
 };
 
-const toprateslaes = {
+const topratedsales = {
 	title: "Top Rated Sales",
 	items: [
 		{
@@ -381,6 +381,6 @@ export {
 	story,
 	sneaker,
 	highlight,
-	toprateslaes,
+	topratedsales,
 	popularsales
 };
