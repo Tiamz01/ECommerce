@@ -1,4 +1,5 @@
 import React from "react";
+import SocialLink from "../utils/SocialLink";
 import Clips from "../utils/Clips";
 
 const Hero = ({
@@ -22,20 +23,27 @@ const Hero = ({
 						>
 							{btntext}
 						</button>
-						<div className=''>
+						<div className='grid items-center gap-5 w-aut h-auto md:gap-3 absolute top-[45vh] lg:top-[50vh] left-[8%] xl:left-0 sm:top-[38vh] '>
 							{videos?.map((val, i) => (
 								<Clips
 									key={i}
 									imgsrc={val.imgsrc}
-									Clip={val.clip}
+									clip={val.clip}
 								/>
 							))}
 						</div>
-						<div className=''></div>
+						<div className='grid items-center absolute top-[33vh] right-0 gap-3'>
+							{sociallinks?.map((val, i) => (
+								<SocialLink
+									key={val.i}
+									icon={val.icon}
+								/>
+							))}
+						</div>
 					</div>
-					<div>
+					<div className='flex items-center'>
 						<img
-							className='w-auto h-[45vh] lg:h-35vh md:h-[31vh] sm:h-[21vh] xsm:h-[19vh] transitions-theme -rotate-[25deg] hover:rotate-0 object-fill cursor-pointer mt-8'
+							className='w-auto h-[45vh] lg:h-35vh md:h-[31vh] sm:h-[21vh] xsm:h-[17vh] transitions-theme -rotate-[25deg] hover:rotate-0 object-fill cursor-pointer mt-8'
 							src={img}
 							alt='hero-img/img'
 						/>
