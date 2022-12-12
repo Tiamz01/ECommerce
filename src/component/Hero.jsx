@@ -11,7 +11,7 @@ const Hero = ({
 				<div className='bg-theme clip-path  h-[85vh] lg:h-[75vh] md:h-[65vh] sm:h-[55vh] w-auto absolute top-0 left-0 right-0 opacity-100 z-10 '></div>
 				<div className='relative opacity-100 z-20 grid justify-items-center items-center nike-container'>
 					<div className='grid justify-items-center items-center mt-28 md:mt-24'>
-						<h1 className=' text-6xl lg:te5xl md:text-4xl sm:text-3xl xsm:text-2xl text-slate-200 font-extrabold filter drop-shadow-sm'>
+						<h1 className=' text-6xl lg:te5xl text-center md:text-4xl sm:text-3xl xsm:text-2xl text-slate-200 font-extrabold filter drop-shadow-sm'>
 							{title}
 						</h1>
 						<h1 className=' text-6xl lg:te5xl md:text-4xl sm:text-3xl xsm:text-2xl text-slate-200 font-extrabold filter drop-shadow-sm'>
@@ -35,7 +35,7 @@ const Hero = ({
 						<div className='grid items-center absolute top-[33vh] right-0 gap-3'>
 							{sociallinks?.map((val, i) => (
 								<SocialLink
-									key={val.i}
+									key={i}
 									icon={val.icon}
 								/>
 							))}
