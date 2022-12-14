@@ -1,12 +1,13 @@
 import React from "react";
-import { Hero, Sales, FlexContent, Stories } from "./component";
+import { Hero, Sales, FlexContent, Stories, Footer } from "./component";
 import {
 	heroapi,
 	highlight,
 	popularsales,
 	sneaker,
 	topratedsales,
-	story
+	story,
+	footerAPI
 } from "./data/data.js";
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
 				<Sales endpoint={topratedsales} />
 				<FlexContent endpoint={sneaker} />
 				<Stories story={story} />
+				<Footer footerAPI={footerAPI} />
 			</main>
 		</>
 	);

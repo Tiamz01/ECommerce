@@ -3,6 +3,7 @@ import Title from "../utils/Title";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { ClockIcon, HashtagIcon, HeartIcon } from "@heroicons/react/24/solid";
+import { truncate } from "lodash";
 
 const Stories = ({ story: { title, news } }) => {
 	const splideOptions = {
@@ -66,7 +67,7 @@ const Stories = ({ story: { title, news } }) => {
 											{val.title}
 										</h1>
 										<p className=' text-justify text-sm px-4 lg:text-xs '>
-											{val.text}
+											{truncate(val.text, { length: 150 })}
 										</p>
 									</div>
 									<div
