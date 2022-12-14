@@ -26,8 +26,8 @@ const App = () => {
 				<Sales endpoint={topratedsales} />
 				<FlexContent endpoint={sneaker} />
 				<Stories story={story} />
-				<Footer footerAPI={footerAPI} />
 			</main>
+			<Footer footerApi={footerAPI} />
 		</>
 	);
 };
