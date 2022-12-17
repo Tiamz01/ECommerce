@@ -5,11 +5,12 @@ import {
 } from "@heroicons/react/24/outline";
 import logo from "./../assets/logo.png";
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { setOpenCart } from "../app/CartSlice.js";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTotalQty, setOpenCart } from "../app/CartSlice.js";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
+	const totalQty = useSelector(selectTotalQty);
 	const dispatch = useDispatch();
 	const onCartToggle = () => {
 		dispatch(
@@ -76,13 +77,13 @@ const Navbar = () => {
 								}`}
 							/>
 							<div
-								className={`absolute top-4 right-0 text-slate-900 shadow shadow-slate-100 w-4 h-4 text-[.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 ${
+								className={`absolute top-4 right-0  shadow shadow-slate-100 w-4 h-4 text-[.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 ${
 									nav
 										? " bg-slate-900 text-slate-100 shadow-slate-900 "
-										: " bg-slate-100 text-slate-900 shadow-slate-100"
+										: " bg-slate-100  shadow-slate-100 text-slate-900"
 								}`}
 							>
-								0
+								{totalQty}
 							</div>
 						</button>
 					</li>

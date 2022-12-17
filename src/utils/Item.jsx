@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setAddItemToCart } from "../app/CartSlice.js";
+import { setAddItemToCart, setOpenCart } from "../app/CartSlice.js";
 import { ShoppingBagIcon, StarIcon } from "@heroicons/react/24/solid";
 
 const Items = ({
@@ -21,6 +21,14 @@ const Items = ({
 		const item = { id, title, text, img, color, shadow, price };
 
 		dispatch(setAddItemToCart(item));
+	};
+
+	const onCartToggle = () => {
+		dispatch(
+			setOpenCart({
+				cartState: true
+			})
+		);
 	};
 	return (
 		<>
@@ -60,6 +68,10 @@ const Items = ({
 					</button>
 					<button
 						type='button'
+						onClick={() => {
+							onAddToCart();
+							onCartToggle();
+						}}
 						className='bg-white-90 blur-effect-theme button-theme px-2 py-1 shadow shadow-slate-200 text-sm text-black'
 					>
 						{btn}

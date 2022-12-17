@@ -22,9 +22,6 @@ const CartItem = ({
 	const qtyDecrease = () => {
 		dispatch(setItemQtyDecrease({ id }));
 	};
-	const clearCart = () => {
-		dispatch(setClearCart());
-	};
 
 	return (
 		<>
