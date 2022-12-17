@@ -23,7 +23,7 @@ const Hero = ({
 						>
 							{btntext}
 						</button>
-						<div className='grid items-center gap-5 w-aut h-auto md:gap-3 absolute top-[45vh] lg:top-[50vh] left-[8%] xl:left-0 sm:top-[38vh] '>
+						<div className='grid items-center gap-5 w-aut h-auto md:gap-3 absolute top-[46vh] lg:top-[48vh] md:top-[40vh] left-[8%] xl:left-0 sm:top-[38vh] '>
 							{videos?.map((val, i) => (
 								<Clips
 									key={i}
@@ -43,7 +43,7 @@ const Hero = ({
 					</div>
 					<div className='flex items-center'>
 						<img
-							className='w-auto h-[45vh] lg:h-35vh md:h-[31vh] sm:h-[21vh] xsm:h-[17vh] transitions-theme -rotate-[25deg] hover:rotate-0 object-fill cursor-pointer mt-8'
+							className='w-auto h-[45vh] lg:h-35vh md:h-[28vh] sm:h-[21vh] xsm:h-[17vh]  sm:w-[18rem] transitions-theme -rotate-[25deg] hover:rotate-0 object-fill cursor-pointer mt-8'
 							src={img}
 							alt='hero-img/img'
 						/>
