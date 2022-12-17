@@ -33,7 +33,7 @@ const Items = ({
 	return (
 		<>
 			<div
-				className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center  ${
+				className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center gap-2  ${
 					ifExists ? " justify-items-start" : " justify-items-center"
 				} w-full transition-all ease-in-out duration-700 rounded-xl hover:scale-105 py-4 px-3`}
 			>
@@ -79,14 +79,14 @@ const Items = ({
 				</div>
 				<div
 					className={`flex items-center ${
-						ifExists ? " absolute top-5 right-1" : " justify-center"
+						ifExists ? " absolute top-4 right-1" : " justify-center"
 					} `}
 				>
 					<img
-						className={`transitions-theme hover:-rotate-12 mt-4 ${
+						className={`transitions-theme hover:-rotate-12 mt-3 ${
 							ifExists
-								? " h-auto w-60 lg:w-56 md:w-48 -rotate-[36deg] "
-								: " h-30 w-30"
+								? " h-auto w-60 lg:w-56 md:w-48 -rotate-[36deg]  "
+								: " h-30 w-15"
 						}`}
 						src={img}
 						alt={`item-Img/${id}`}
