@@ -1,7 +1,6 @@
 import React from "react";
 
 const Title = ({ title }) => {
-	console.log(title);
 	return (
 		<div>
 			<div className='grid items-center'>
