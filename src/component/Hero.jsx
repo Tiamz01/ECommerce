@@ -1,6 +1,8 @@
 import React from "react";
 import SocialLink from "../utils/SocialLink";
 import Clips from "../utils/Clips";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Hero = ({
 	heroapi: { title, sociallinks, btntext, img, subtitle, videos }
@@ -42,10 +44,13 @@ const Hero = ({
 						</div>
 					</div>
 					<div className='flex items-center justify-center'>
-						<img
-							className='w-auto h-[45vh] lg:h-[35vh] md:h-[28vh] sm:h-[21vh] xsm:h-[17vh] sm:w-[18rem] xsm:w-[14rem] transitions-theme -rotate-[25deg] hover:rotate-0 object-fill cursor-pointer mt-8 sm:mt-4'
-							src={img}
+						<LazyLoadImage
 							alt='hero-img/img'
+							effect="blur"
+							src={img}
+							className='w-auto h-[45vh] lg:h-[35vh] md:h-[28vh] sm:h-[21vh] xsm:h-[17vh] sm:w-[18rem] xsm:w-[14rem] transitions-theme -rotate-[25deg] hover:rotate-0 object-fill cursor-pointer mt-8 sm:mt-4'
+							threshold={100}
+							placeholderSrc={img}
 						/>
 					</div>
 				</div>

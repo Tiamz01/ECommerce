@@ -11,6 +11,16 @@ This project is a complete e-commerce application with cart and checkout functio
   - WhatsApp integration for order communication
   - Paystack integration for secure online payments
 
+## Performance Optimizations
+
+- Image lazy loading with blur placeholders
+- Video lazy loading and optimized playback
+- Code splitting and component lazy loading
+- Bundle optimization with Vite
+- Critical CSS inlining
+- DNS prefetching and resource preloading
+- Web Vitals monitoring
+
 ## Production Deployment
 
 ### Node.js Version
@@ -90,6 +100,12 @@ To build for production:
 npm run build
 ```
 
+To optimize images (placeholder script):
+
+```bash
+node optimize-images.js
+```
+
 ## Project Structure
 
 ```
@@ -110,3 +126,5 @@ src/
 - Paystack SDK
 - Heroicons
 - Vite (build tool)
+- react-lazy-load-image-component
+- web-vitals

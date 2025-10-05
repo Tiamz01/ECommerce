@@ -2,6 +2,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { setAddItemToCart, setOpenCart } from "../app/CartSlice.js";
 import { ShoppingBagIcon, StarIcon } from "@heroicons/react/24/solid";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Items = ({
 	ifExists,
@@ -82,14 +84,17 @@ const Items = ({
 						ifExists ? "absolute top-4 right-1" : "justify-center"
 					}`}
 				>
-					<img
+					<LazyLoadImage
+						alt={`item-Img/${id}`}
+						effect="blur"
+						src={img}
 						className={`transitions-theme hover:-rotate-12 mt-3 ${
 							ifExists
 								? "h-auto w-60 lg:w-56 md:w-48 sm:w-40 xsm:w-32 -rotate-[36deg]"
 								: "h-30 w-15 sm:w-24 xsm:w-20"
 						}`}
-						src={img}
-						alt={`item-Img/${id}`}
+						threshold={100}
+						placeholderSrc={img}
 					/>
 				</div>
 			</div>
