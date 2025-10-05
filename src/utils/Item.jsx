@@ -92,7 +92,7 @@ const Items = ({
 							ifExists
 								? "h-auto w-60 lg:w-56 md:w-48 sm:w-40 xsm:w-32 -rotate-[36deg]"
 								: "h-30 w-15 sm:w-24 xsm:w-20"
-						}`}
+						} transition-transform duration-1000 ease-in-out`}
 						threshold={100}
 						placeholderSrc={img}
 					/>
