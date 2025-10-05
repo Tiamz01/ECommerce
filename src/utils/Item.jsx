@@ -33,38 +33,38 @@ const Items = ({
 	return (
 		<>
 			<div
-				className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center gap-2  ${
-					ifExists ? " justify-items-start" : " justify-items-center"
-				} w-full transition-all ease-in-out duration-700 rounded-xl hover:scale-105 py-4 px-3`}
+				className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center gap-2 ${
+					ifExists ? "justify-items-start" : "justify-items-center"
+				} w-full transition-all ease-in-out duration-700 rounded-xl hover:scale-105 py-4 px-3 sm:py-3 sm:px-2`}
 			>
 				<div
-					className={`grid items-center justify-items-center ${
-						ifExists ? " justify-items-start" : " justify-items-center"
-					} `}
+					className={`grid items-center ${
+						ifExists ? "justify-items-start" : "justify-items-center"
+					}`}
 				>
-					<h1 className=' text-slate-200 text-base  md:text-base font-medium filter drop-shadow'>
+					<h1 className='text-slate-200 text-base md:text-sm sm:text-xs font-medium filter drop-shadow'>
 						{title}
 					</h1>
-					<p className=' text-slate-200 text-xl lg:text-lg md:text-sm font-normal filter drop-shadow'>
+					<p className='text-slate-200 text-xl lg:text-lg md:text-base sm:text-sm font-normal filter drop-shadow'>
 						{text}
 					</p>
 				</div>
-				<div className='flex items-center justify-between w-28 gap-8 md:gap-6 my-2'>
-					<div className='flex items-center bg-white/80 px-1 rounded blur-effect-theme font-medium '>
-						<h1 className='text-sm text-black font-medium'>${price}</h1>
+				<div className='flex items-center justify-between w-28 sm:w-24 gap-8 md:gap-6 sm:gap-4 my-2'>
+					<div className='flex items-center bg-white/80 px-1 rounded blur-effect-theme font-medium'>
+						<h1 className='text-sm md:text-xs text-black font-medium'>${price}</h1>
 					</div>
 					<div className='flex items-center justify-center gap-1'>
-						<StarIcon className='  icon-style text-white w-5 h-5 md:w-4 md:h-4 ' />
-						<h1 className=' md:text-sm font-normal text-slate-100'>{rating}</h1>
+						<StarIcon className='icon-style text-white w-5 h-5 md:w-4 md:h-4 sm:w-3 sm:h-3' />
+						<h1 className='md:text-sm sm:text-xs font-normal text-slate-100'>{rating}</h1>
 					</div>
 				</div>
-				<div className='flex items-center gap-2'>
+				<div className='flex items-center gap-2 sm:gap-1'>
 					<button
 						type='button'
 						onClick={() => onAddToCart()}
-						className=' bg-white-90 blur-effect-theme button-theme p-0.5 shadow shadow-slate-200'
+						className='bg-white-90 blur-effect-theme button-theme p-0.5 shadow shadow-slate-200 sm:p-0.5'
 					>
-						<ShoppingBagIcon className='icon-style text-slate-900' />
+						<ShoppingBagIcon className='icon-style text-slate-900 sm:w-4 sm:h-4' />
 					</button>
 					<button
 						type='button'
@@ -72,21 +72,21 @@ const Items = ({
 							onAddToCart();
 							onCartToggle();
 						}}
-						className='bg-white-90 blur-effect-theme button-theme px-2 py-1 shadow shadow-slate-200 text-sm text-black'
+						className='bg-white-90 blur-effect-theme button-theme px-2 py-1 shadow shadow-slate-200 text-sm text-black sm:px-1.5 sm:py-0.5 sm:text-xs'
 					>
 						{btn}
 					</button>
 				</div>
 				<div
 					className={`flex items-center ${
-						ifExists ? " absolute top-4 right-1" : " justify-center"
-					} `}
+						ifExists ? "absolute top-4 right-1" : "justify-center"
+					}`}
 				>
 					<img
 						className={`transitions-theme hover:-rotate-12 mt-3 ${
 							ifExists
-								? " h-auto w-60 lg:w-56 md:w-48 -rotate-[36deg]  "
-								: " h-30 w-15"
+								? "h-auto w-60 lg:w-56 md:w-48 sm:w-40 xsm:w-32 -rotate-[36deg]"
+								: "h-30 w-15 sm:w-24 xsm:w-20"
 						}`}
 						src={img}
 						alt={`item-Img/${id}`}

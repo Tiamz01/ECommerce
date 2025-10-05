@@ -10,6 +10,7 @@ import { selectTotalQty, setOpenCart } from "../app/CartSlice.js";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
+	const [mobileMenu, setMobileMenu] = useState(false);
 	const totalQty = useSelector(selectTotalQty);
 	const dispatch = useDispatch();
 	const onCartToggle = () => {
@@ -42,27 +43,41 @@ const Navbar = () => {
 					: "fixed top-0 left-0 right-0 h-[9vh] flex items-center justify-center blur-effect-theme z-[200]"
 			}
 		>
-			<nav className='flex  items-center  justify-between nike-container'>
+			<nav className='flex items-center justify-between nike-container'>
 				<div className='flex items-center'>
 					<img
-						className={`w-[8rem] h-auto p-2 ${nav && "filter brightness-0"}`}
+						className={`w-24 sm:w-20 xsm:w-16 h-auto p-2 ${nav && "filter brightness-0"}`}
 						src={logo}
 						alt='Nike logo'
 					/>
 				</div>
-				<ul className='flex items-center justify-center gap-2'>
+				{/* Mobile menu button */}
+				<div className='sm:hidden flex items-center'>
+					<button 
+						onClick={() => setMobileMenu(!mobileMenu)}
+						className='text-slate-900 focus:outline-none'
+					>
+						{/* Hamburger icon */}
+						<div className={`space-y-1 ${nav ? "text-slate-900" : "text-slate-100"}`}>
+							<span className={`block w-6 h-0.5 ${nav ? "bg-slate-900" : "bg-slate-100"}`}></span>
+							<span className={`block w-6 h-0.5 ${nav ? "bg-slate-900" : "bg-slate-100"}`}></span>
+							<span className={`block w-6 h-0.5 ${nav ? "bg-slate-900" : "bg-slate-100"}`}></span>
+						</div>
+					</button>
+				</div>
+				<ul className='flex items-center justify-center gap-2 sm:gap-1'>
 					<li className='grid items-center'>
 						<MagnifyingGlassIcon
 							className={`icon-style ${
 								nav && "text-slate-900 transition-all duration-300"
-							}`}
+							} sm:h-5 sm:w-5`}
 						/>
 					</li>
 					<li className='grid items-center'>
 						<HeartIcon
 							className={`icon-style ${
 								nav && "text-slate-900 transition-all duration-300"
-							}`}
+							} sm:h-5 sm:w-5`}
 						/>
 					</li>
 					<li className='grid items-center'>
@@ -74,10 +89,10 @@ const Navbar = () => {
 							<ShoppingBagIcon
 								className={`icon-style ${
 									nav && "text-slate-900 transition-all duration-300"
-								}`}
+								} sm:h-5 sm:w-5`}
 							/>
 							<div
-								className={`absolute top-4 right-0  shadow shadow-slate-100 w-4 h-4 text-[.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 ${
+								className={`absolute top-4 right-0 shadow shadow-slate-100 w-4 h-4 text-[.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 sm:top-3 sm:right-0 sm:w-3 sm:h-3 ${
 									nav
 										? " bg-slate-900 text-slate-100 shadow-slate-900 "
 										: " bg-slate-100  shadow-slate-100 text-slate-900"
