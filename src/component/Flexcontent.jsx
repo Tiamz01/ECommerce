@@ -44,9 +44,9 @@ const FlexContent = ({
 						alt={`img/${heading}`}
 						className={`transitions-theme-slow w-auto object-fill mt-7 ${
 							ifExists
-								? "h-60 lg:h-56 md:h-52 sm:h-44 xsm:h-36 rotate-6 hover:rotate-12  "
-								: " h-72 lg:h-64 md:h-60 sm:h-48 xsm:h-40 rotate-[19deg] hover:rotate-[25deg]"
-						} transition-transform duration-1000 ease-in-out`}
+								? "h-60 lg:h-56 md:h-52 sm:h-44 xsm:h-36 rotate-6 hover:rotate-9  "
+								: " h-72 lg:h-64 md:h-60 sm:h-48 xsm:h-40 rotate-[19deg] hover:rotate-[22deg]"
+						} transition-transform duration-2000 ease-in-out`}
 					/>
 				</div>
 			</div>
