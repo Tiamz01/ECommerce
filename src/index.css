@@ -82,8 +82,3 @@
 		@apply transition-all duration-700 ease-in-out cursor-pointer;
 	}
 }
-@layer components {
-	.nike-container {
-		@apply w-11/12 m-auto;
-	}
-}
