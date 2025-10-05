@@ -48,7 +48,7 @@ const Hero = ({
 							alt='hero-img/img'
 							effect="blur"
 							src={img}
-							className='w-auto h-[45vh] lg:h-[35vh] md:h-[28vh] sm:h-[21vh] xsm:h-[17vh] sm:w-[18rem] xsm:w-[14rem] transitions-theme -rotate-[25deg] hover:rotate-0 object-fill cursor-pointer mt-8 sm:mt-4'
+							className='w-auto h-[45vh] lg:h-[35vh] md:h-[28vh] sm:h-[21vh] xsm:h-[17vh] sm:w-[18rem] xsm:w-[14rem] transitions-theme-slow -rotate-[25deg] hover:rotate-0 object-fill cursor-pointer mt-8 sm:mt-4'
 							threshold={100}
 							placeholderSrc={img}
 						/>

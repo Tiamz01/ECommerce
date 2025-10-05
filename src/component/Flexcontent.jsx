@@ -42,10 +42,10 @@ const FlexContent = ({
 					<img
 						src={img}
 						alt={`img/${heading}`}
-						className={`transitions-theme w-auto object-fill mt-7 ${
+						className={`transitions-theme-slow w-auto object-fill mt-7 ${
 							ifExists
 								? "h-60 lg:h-56 md:h-52 sm:h-44 xsm:h-36 rotate-6 hover:rotate-12  "
-								: " h-72 lg:h-64 md:h-60 sm:h-48 xsm:h-40 rotate-[19deg] hover:rotate-1"
+								: " h-72 lg:h-64 md:h-60 sm:h-48 xsm:h-40 rotate-[19deg] hover:rotate-12"
 						}`}
 					/>
 				</div>
